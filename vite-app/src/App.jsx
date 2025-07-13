@@ -8,15 +8,30 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Header/>
+      <Header />
 
-      <main className="w-full">
+      <main className="w-full mt-20 flex-grow">
         {/* Sección de bienvenida */}
         <section className="min-h-screen py-16 flex flex-col bg-white px-10 items-start text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-indigo-600 mb-4">Bienvenido a Mi Proyecto</h1>
           <p className="text-gray-700 text-lg max-w-xl">
             Descubrí soluciones digitales éticas y eficientes, construidas con pasión y propósito.
           </p>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <p className="text-3xl font-bold text-indigo-600">+150</p>
+              <p className="text-sm text-gray-600">Clientes felices</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-indigo-600">10</p>
+              <p className="text-sm text-gray-600">Años de experiencia</p>
+            </div>
+          </div>
+
+          <blockquote className="mt-10 italic text-gray-500 border-l-4 pl-4 border-indigo-300">
+            “Una propuesta digital ética es posible. Este proyecto lo demuestra.”
+          </blockquote>
+
         </section>
 
         {/* Sección 2: Información / Destacados */}
@@ -42,41 +57,41 @@ function App() {
 
         <section className="py-16 px-6 bg-indigo-50">
           <div className="max-w-6xl mx-auto text-center mb-12">
-                      <h2 className="text-3xl font-semibold text-indigo-700">Nuestros pilares</h2>
-                                  <p className="text-gray-600 mt-4">Conocé las áreas que impulsan nuestra propuesta digital.</p>
-                                            </div>
+            <h2 className="text-3xl font-semibold text-indigo-700">Nuestros pilares</h2>
+            <p className="text-gray-600 mt-4">Conocé las áreas que impulsan nuestra propuesta digital.</p>
+          </div>
 
-                                                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                                                  {/* Card 1 */}
-                                                                              <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
-                                                                                            <h3 className="text-xl font-bold text-indigo-600 mb-2">Innovación Ética</h3>
-                                                                                                          <p className="text-gray-700 text-sm">
-                                                                                                                          Diseñamos pensando en el usuario, priorizando privacidad y responsabilidad tecnológica.
-                                                                                                                                        </p>
-                                                                                                                                                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
+              <h3 className="text-xl font-bold text-indigo-600 mb-2">Innovación Ética</h3>
+              <p className="text-gray-700 text-sm">
+                Diseñamos pensando en el usuario, priorizando privacidad y responsabilidad tecnológica.
+              </p>
+            </div>
 
-                                                                                                                                                                {/* Card 2 */}
-                                                                                                                                                                            <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
-                                                                                                                                                                                          <h3 className="text-xl font-bold text-indigo-600 mb-2">Colaboración</h3>
-                                                                                                                                                                                                        <p className="text-gray-700 text-sm">
-                                                                                                                                                                                                                        Valoramos el trabajo en equipo y el diálogo interdisciplinario para soluciones sostenibles.
-                                                                                                                                                                                                                                      </p>
-                                                                                                                                                                                                                                                  </div>
+            {/* Card 2 */}
+            <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
+              <h3 className="text-xl font-bold text-indigo-600 mb-2">Colaboración</h3>
+              <p className="text-gray-700 text-sm">
+                Valoramos el trabajo en equipo y el diálogo interdisciplinario para soluciones sostenibles.
+              </p>
+            </div>
 
-                                                                                                                                                                                                                                                              {/* Card 3 */}
-                                                                                                                                                                                                                                                                          <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
-                                                                                                                                                                                                                                                                                        <h3 className="text-xl font-bold text-indigo-600 mb-2">Transparencia</h3>
-                                                                                                                                                                                                                                                                                                      <p className="text-gray-700 text-sm">
-                                                                                                                                                                                                                                                                                                                      Apostamos por la claridad en nuestros procesos y el respeto por los derechos digitales.
-                                                                                                                                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                                                  </section>
-                                                                                                                                                                                                                                                                                                                                                                  
+            {/* Card 3 */}
+            <div className="bg-white shadow-md rounded-xl p-6 transition hover:shadow-lg">
+              <h3 className="text-xl font-bold text-indigo-600 mb-2">Transparencia</h3>
+              <p className="text-gray-700 text-sm">
+                Apostamos por la claridad en nuestros procesos y el respeto por los derechos digitales.
+              </p>
+            </div>
+          </div>
+        </section>
+
 
       </main>
-      
-      <Footer/>
+
+      <Footer />
     </div>
   )
 }

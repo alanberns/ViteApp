@@ -10,29 +10,29 @@ function App() {
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
 
-      <main className="w-full mt-20 flex-grow">
+      <main className="w-full mt-15 flex-grow">
         {/* Sección de bienvenida */}
-        <section className="min-h-screen py-16 flex flex-col bg-white px-10 items-start text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-indigo-600 mb-4">Bienvenido a Mi Proyecto</h1>
-          <p className="text-gray-700 text-lg max-w-xl">
-            Descubrí soluciones digitales éticas y eficientes, construidas con pasión y propósito.
-          </p>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <p className="text-3xl font-bold text-indigo-600">+150</p>
-              <p className="text-sm text-gray-600">Clientes felices</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-indigo-600">10</p>
-              <p className="text-sm text-gray-600">Años de experiencia</p>
-            </div>
+        <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-white to-indigo-200 px-6 md:px-20 py-16 md:py-20 text-gray-900 gap-10 md:gap-32">
+    
+          {/* Logo grande lado izquierdo */}
+          <div className="flex flex-col items-center md:items-center text-center">
+            <div className="text-7xl md:text-8xl font-extrabold tracking-tight text-indigo-600">&lt;/&gt;</div>
+            <div className="text-5xl md:text-6xl font-semibold text-indigo-600">AB</div>
           </div>
 
-          <blockquote className="mt-10 italic text-gray-500 border-l-4 pl-4 border-indigo-300">
-            “Una propuesta digital ética es posible. Este proyecto lo demuestra.”
-          </blockquote>
+          {/* Texto lado derecho */}
+          <div className="max-w-md text-center md:text-left">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-indigo-900">Soluciones Digitales Éticas</h1>
+            <p className="text-base md:text-lg text-gray-800 mb-6">
+              Desarrollo con propósito, elegancia y tecnología que transforma.
+            </p>
+            <button className="px-6 py-2 rounded bg-indigo-700 text-white font-medium hover:bg-indigo-800 transition">
+              Conocer más
+            </button>
+          </div>
 
         </section>
+
 
         {/* Sección 2: Información / Destacados */}
         <section className="py-16 bg-indigo-50 px-6 text-gray-800">
@@ -44,17 +44,7 @@ function App() {
           </div>
         </section>
 
-        {/* Sección 3: CTA o Testimonios (placeholder) */}
-        <section className="py-16 bg-white px-6 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-semibold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
-            <p className="text-lg text-gray-600 mb-6">Explorá nuestros servicios o contactanos para colaborar.</p>
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition">
-              Empezar ahora
-            </button>
-          </div>
-        </section>
-
+        {/* Sección : Pilares */}
         <section className="py-16 px-6 bg-indigo-50">
           <div className="max-w-6xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-semibold text-indigo-700">Nuestros pilares</h2>
@@ -88,6 +78,46 @@ function App() {
           </div>
         </section>
 
+        {/* Sección de estadísticas */}
+        <section className="bg-white py-16 px-6 md:px-20 text-gray-900">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Logros que nos respaldan</h2>
+            <p className="text-gray-700 text-base md:text-lg">
+              Años de dedicación, innovación y compromiso nos han llevado hasta acá.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            <div>
+              <p className="text-4xl font-bold text-indigo-600">+150</p>
+              <p className="text-sm text-gray-600">Clientes felices</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-indigo-600">10</p>
+              <p className="text-sm text-gray-600">Años de experiencia</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-indigo-600">25</p>
+              <p className="text-sm text-gray-600">Proyectos completados</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-indigo-600">100%</p>
+              <p className="text-sm text-gray-600">Compromiso ético</p>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Sección 3: CTA o Testimonios (placeholder) */}
+        <section className="py-16 bg-white px-6 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-semibold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
+            <p className="text-lg text-gray-600 mb-6">Explorá nuestros servicios o contactanos para colaborar.</p>
+            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition">
+              Empezar ahora
+            </button>
+          </div>
+        </section>
 
       </main>
 

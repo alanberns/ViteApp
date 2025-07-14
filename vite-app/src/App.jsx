@@ -5,6 +5,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Servicios from './pages/Servicios';
+import Contacto from './pages/Contacto';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,10 +15,11 @@ function App() {
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
 
-        <main className="w-full mt-15 flex-grow py-16">
+        <main className="w-full flex-grow py-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/servicios" element={<Servicios />} />
+            <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>
 

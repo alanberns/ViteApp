@@ -27,7 +27,9 @@ export default function Header() {
           <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
             Servicios
           </Link>
-          <a href="#" className="text-white hover:text-indigo-200 transition-colors">Contacto</a>
+          <Link to="/contacto" className="text-white hover:text-indigo-200 transition-colors">
+            Contacto
+          </Link>
         </nav>
       </div>
 
@@ -38,9 +40,15 @@ export default function Header() {
         } md:hidden px-4 bg-indigo-600`}
       >
         <nav className="py-4 flex flex-col space-y-3">
-          <a href="/" className="text-white hover:text-indigo-200 transition">Inicio</a>
-          <a href="/servicios" className="text-white hover:text-indigo-200 transition">Servicios</a>
-          <a href="#" className="text-white hover:text-indigo-200 transition">Contacto</a>
+        <Link to="/" className="text-white hover:text-indigo-200 transition-colors">
+            Inicio
+          </Link>
+          <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
+            Servicios
+          </Link>
+          <Link to="/contacto" className="text-white hover:text-indigo-200 transition-colors">
+            Contacto
+          </Link>
         </nav>
       </div>
     </header>

@@ -6,12 +6,14 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Servicios from './pages/Servicios';
 import Contacto from './pages/Contacto';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
 

@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { motion } from "framer-motion";
 
 export default function Home() {
   const proyectos = [
@@ -46,9 +43,11 @@ export default function Home() {
           <p className="text-base md:text-lg text-gray-800 mb-6">
             Desarrollo con propósito, elegancia y tecnología que transforma.
           </p>
-          <button className="px-6 py-2 rounded bg-indigo-700 text-white font-medium hover:bg-indigo-800 transition">
-            Conocer más
-          </button>
+          <a href="#proyectos">
+            <button className="px-6 py-2 rounded bg-indigo-700 text-white font-medium hover:bg-indigo-800 transition">
+              Conocer más
+            </button>
+          </a>
         </div>
 
       </section>
@@ -74,31 +73,49 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Card 1 */}
-            <div className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition hover:shadow-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
+              className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition transform duration-1000 hover:-translate-y-2 hover:shadow-xl"
+            >
               <div className="text-5xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-indigo-600 mb-3">Innovación Ética</h3>
               <p className="text-gray-700 text-base">
                 Diseñamos pensando en el usuario, priorizando privacidad y responsabilidad tecnológica.
               </p>
-            </div>
+            </motion.div>
 
             {/* Card 2 */}
-            <div className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition hover:shadow-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
+              className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition transform duration-1000 hover:-translate-y-2 hover:shadow-xl"
+            >
               <div className="text-5xl mb-4">🤝</div>
               <h3 className="text-xl font-bold text-indigo-600 mb-3">Colaboración</h3>
               <p className="text-gray-700 text-base">
                 Valoramos el trabajo en equipo y el diálogo interdisciplinario para soluciones sostenibles.
               </p>
-            </div>
+            </motion.div>
 
             {/* Card 3 */}
-            <div className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition hover:shadow-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ once: true }}
+              className="bg-white shadow-lg rounded-xl p-8 flex flex-col items-center text-center min-h-[280px] transition transform duration-1000 hover:-translate-y-2 hover:shadow-xl"
+            >
               <div className="text-5xl mb-4">🔍</div>
               <h3 className="text-xl font-bold text-indigo-600 mb-3">Transparencia</h3>
               <p className="text-gray-700 text-base">
                 Apostamos por la claridad en nuestros procesos y el respeto por los derechos digitales.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -168,7 +185,8 @@ export default function Home() {
       </section>
 
       {/* Sección : Proyectos destacados */}
-
+      <section className="py-16 bg-white px-6 text-center" id="proyectos">
+      </section>
 
       {/* Sección 3: Accion, ir a servicios */}
       <section className="py-16 bg-white px-6 text-center">

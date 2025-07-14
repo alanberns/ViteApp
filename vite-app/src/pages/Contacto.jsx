@@ -1,7 +1,7 @@
 export default function Contacto() {
     return (
         <div className="w-full flex flex-col">
-            <section className="py-20 bg-indigo-50 text-gray-900">
+            <section className="py-20 bg-indigo-50 text-gray-900 min-h-screen">
                 <div className="max-w-3xl mx-auto px-6">
                     <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-6 text-center">Contacto</h2>
                     <p className="text-center text-gray-700 mb-12">

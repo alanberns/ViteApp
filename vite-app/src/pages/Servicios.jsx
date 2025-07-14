@@ -1,29 +1,30 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Servicios() {
     const servicios = [
-      {
-        titulo: "Desarrollo Web",
-        descripcion: "Creación de sitios modernos, responsivos y optimizados para SEO.",
-        icono: "🖥️",
-      },
-      {
-        titulo: "Apps Mobile",
-        descripcion: "Aplicaciones nativas o híbridas para Android y iOS con UX profesional.",
-        icono: "📱",
-      },
-      {
-        titulo: "Consultoría IT",
-        descripcion: "Te ayudamos a definir estrategias tecnológicas para escalar tu negocio.",
-        icono: "🧠",
-      },
-      {
-        titulo: "Automatización",
-        descripcion: "Optimizamos tus procesos con herramientas de IA y scripts personalizados.",
-        icono: "🤖",
-      },
+        {
+            titulo: "Desarrollo Web",
+            descripcion: "Creación de sitios modernos, responsivos y optimizados para SEO.",
+            icono: "🖥️",
+        },
+        {
+            titulo: "Apps Mobile",
+            descripcion: "Aplicaciones nativas o híbridas para Android y iOS con UX profesional.",
+            icono: "📱",
+        },
+        {
+            titulo: "Consultoría IT",
+            descripcion: "Te ayudamos a definir estrategias tecnológicas para escalar tu negocio.",
+            icono: "🧠",
+        },
+        {
+            titulo: "Automatización",
+            descripcion: "Optimizamos tus procesos con herramientas de IA y scripts personalizados.",
+            icono: "🤖",
+        },
     ];
-  
+
     return (
         <div className="w-full flex flex-col">
             <section className="py-20 bg-white text-gray-900">
@@ -34,16 +35,29 @@ export default function Servicios() {
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                        {servicios.map((servicio, index) => (
-                            <div
-                                key={index}
-                                className="bg-indigo-50 rounded-xl shadow-md p-8 transition transform hover:-translate-y-2 hover:shadow-xl"
-                            >
-                                <div className="text-5xl mb-4">{servicio.icono}</div>
-                                <h3 className="text-xl font-semibold text-indigo-700 mb-2">{servicio.titulo}</h3>
-                                <p className="text-gray-600 text-sm">{servicio.descripcion}</p>
-                            </div>
-                        ))}
+                        {
+                            servicios.map((servicio, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.9, ease: [0.25, 0.8, 0.5, 1], delay: index * 0.25 }}
+                                    viewport={{ once: true }}
+                                    className="bg-indigo-50 rounded-xl shadow-md p-8 transition transform duration-1000 hover:-translate-y-2 hover:shadow-xl"
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.2, rotate: -5 }}
+                                        transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                                        className="text-5xl mb-4"
+                                    >
+                                        {servicio.icono}
+                                    </motion.div>
+
+                                    <h3 className="text-xl font-semibold text-indigo-700 mb-2">{servicio.titulo}</h3>
+                                    <p className="text-gray-600 text-sm">{servicio.descripcion}</p>
+                                </motion.div>
+                            ))
+                        }
                     </div>
                     <div className="mt-16 text-center">
                         <Link
@@ -58,5 +72,4 @@ export default function Servicios() {
             </section>
         </div>
     );
-  }
-  
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,12 @@ export default function Header() {
 
         {/* Menú desktop */}
         <nav className="space-x-6 hidden md:flex">
-          <a href="#" className="text-white hover:text-indigo-200 transition-colors">Inicio</a>
-          <a href="#" className="text-white hover:text-indigo-200 transition-colors">Servicios</a>
+          <Link to="/" className="text-white hover:text-indigo-200 transition-colors">
+            Inicio
+          </Link>
+          <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
+            Servicios
+          </Link>
           <a href="#" className="text-white hover:text-indigo-200 transition-colors">Contacto</a>
         </nav>
       </div>
@@ -33,8 +38,8 @@ export default function Header() {
         } md:hidden px-4 bg-indigo-600`}
       >
         <nav className="py-4 flex flex-col space-y-3">
-          <a href="#" className="text-white hover:text-indigo-200 transition">Inicio</a>
-          <a href="#" className="text-white hover:text-indigo-200 transition">Servicios</a>
+          <a href="/" className="text-white hover:text-indigo-200 transition">Inicio</a>
+          <a href="/servicios" className="text-white hover:text-indigo-200 transition">Servicios</a>
           <a href="#" className="text-white hover:text-indigo-200 transition">Contacto</a>
         </nav>
       </div>

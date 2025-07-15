@@ -26,6 +26,28 @@ export default function Home() {
     },
   ];
 
+  const oportunidadesDestacadas = [
+    {
+      id: 1,
+      titulo: "Desarrollador/a Frontend Jr.",
+      descripcion: "Sumate al equipo para construir interfaces atractivas y accesibles usando React y Tailwind.",
+      tipo: "Remoto - Medio tiempo"
+    },
+    {
+      id: 2,
+      titulo: "Asistente Técnico de Proyectos",
+      descripcion: "Apoyá iniciativas digitales desde la documentación hasta el testing en ambientes colaborativos.",
+      tipo: "Presencial - Buenos Aires"
+    },
+    {
+      id: 3,
+      titulo: "Trainee Backend Developer",
+      descripcion: "Aprendé y aplicá buenas prácticas en APIs y bases de datos con Node.js y PostgreSQL.",
+      tipo: "Híbrido - Jornada completa"
+    }
+  ];
+  
+
   return (
     <div className="w-full flex flex-col">
       {/* Sección de bienvenida */}
@@ -57,9 +79,13 @@ export default function Home() {
       <section className="py-16 bg-white px-6 text-gray-800">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold text-indigo-700 mb-6">¿Qué hacemos?</h2>
-          <p className="text-lg">
+          <p className="text-lg pb-8">
             Creamos herramientas centradas en las personas, respetando su privacidad y fomentando el desarrollo sostenible de la tecnología.
           </p>
+          <blockquote className="border-l-4 border-indigo-500 pl-4 text-gray-800 italic">
+            “Desde nuestros comienzos, soñamos con una tecnología que respete, inspire y empodere. Hoy, cada herramienta que creamos refleja ese compromiso con las personas y con un futuro sostenible.”
+            <footer className="mt-2 text-gray-500 text-sm">— Alejo González, Fundador de A-B</footer>
+          </blockquote>
         </div>
       </section>
 
@@ -189,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* Sección 3: Accion, ir a servicios */}
-      <section className="py-16 bg-white px-6 text-center">
+      <section className="py-16 bg-indigo-100 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
           <p className="text-lg text-gray-600 mb-6">Explorá nuestros servicios o contactanos para colaborar.</p>
@@ -200,6 +226,35 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Sección : Oportunidades */}
+      <section className="py-20 px-6 bg-white text-gray-800" id="oportunidades">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-indigo-700 mb-8 text-center">Sumate al equipo</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {oportunidadesDestacadas.map((oportunidad) => (
+              <div
+                key={oportunidad.id}
+                className="bg-indigo-50 rounded-lg shadow-md p-6 hover:shadow-lg transition"
+              >
+                <h3 className="text-xl font-semibold text-indigo-600 mb-2">{oportunidad.titulo}</h3>
+                <p className="text-gray-700 mb-4">{oportunidad.descripcion}</p>
+                <span className="text-sm font-medium text-gray-500">{oportunidad.tipo}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/oportunidades">
+              <button className="px-6 py-2 rounded bg-indigo-700 text-white font-semibold hover:bg-indigo-800 transition">
+                Ver todas
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

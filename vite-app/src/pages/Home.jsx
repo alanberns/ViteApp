@@ -52,7 +52,11 @@ export default function Home() {
     <div className="w-full flex flex-col">
       {/* Sección de bienvenida */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-white to-indigo-200 px-6 md:px-20 md:py-4 text-gray-900 gap-10 md:gap-32">
-
+      <img
+          src="/public/img/inicio.jpg"
+          alt="Persona trabajando"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
         {/* Logo grande lado izquierdo */}
         <div className="flex flex-col items-center md:items-center text-center">
           <div className="text-7xl md:text-8xl font-extrabold tracking-tight text-indigo-600">&lt;/&gt;</div>
@@ -78,7 +82,7 @@ export default function Home() {
       {/* Sección 2: Información / Destacados */}
       <section className="relative py-16 px-6 text-white">
         <img
-          src="/info-imagen.jpg"
+          src="/public/img/hacemos.jpg"
           alt="Persona trabajando"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
@@ -232,6 +236,11 @@ export default function Home() {
       {/* Sección : Oportunidades */}
       <section className="py-20 px-6 bg-white text-gray-800" id="oportunidades">
         <div className="max-w-6xl mx-auto">
+          <img
+              src="/public/img/sumate.jpg"
+              alt="Persona trabajando"
+              className="absolute inset-0 w-full h-full object-cover opacity-30"
+            />
           <h2 className="text-4xl font-bold text-indigo-700 mb-8 text-center">Sumate al equipo</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

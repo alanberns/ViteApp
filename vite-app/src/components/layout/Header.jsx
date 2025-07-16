@@ -15,7 +15,7 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none text-2xl"
           >
-            ☰
+            {isOpen ? '✖' : '☰'}
           </button>
         </div>
 
@@ -43,16 +43,16 @@ export default function Header() {
         } md:hidden px-4 bg-indigo-600`}
       >
         <nav className="py-4 flex flex-col space-y-3">
-        <Link to="/" className="text-white hover:text-indigo-200 transition-colors">
+        <Link to="/" onClick={() => setIsOpen(false)} className="text-white hover:text-indigo-200 transition-colors">
             Inicio
           </Link>
-          <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
+          <Link to="/servicios" onClick={() => setIsOpen(false)} className="text-white hover:text-indigo-200 transition-colors">
             Servicios
           </Link>
-          <Link to="/oportunidades" className="text-white hover:text-indigo-200 transition-colors">
+          <Link to="/oportunidades" onClick={() => setIsOpen(false)} className="text-white hover:text-indigo-200 transition-colors">
             Oportunidades
           </Link>
-          <Link to="/fundacion" className="text-white hover:text-indigo-200 transition-colors">
+          <Link to="/fundacion" onClick={() => setIsOpen(false)} className="text-white hover:text-indigo-200 transition-colors">
             Fundacion
           </Link>
         </nav>

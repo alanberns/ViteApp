@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col">
       {/* Sección de bienvenida */}
-      <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
+      <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32 animate-fade-in">
         <img
           src="/public/img/inicio.jpg"
           alt="Escritorio con una notebook"
@@ -59,7 +59,7 @@ export default function Home() {
         />
         {/* Logo grande lado izquierdo */}
         <div className="flex flex-col items-center md:items-center text-center">
-        <div className="bg-white bg-opacity-70 rounded px-4 py-2 shadow-md">
+          <div className="bg-white bg-opacity-70 rounded px-4 py-2 shadow-md">
             <div className="text-7xl font-extrabold tracking-tight text-indigo-600 drop-shadow-lg">&lt;/&gt;</div>
             <div className="text-5xl font-semibold text-indigo-600 drop-shadow-lg">A-B</div>
           </div>
@@ -236,35 +236,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección : Proyectos destacados */}
-      <section className="py-16 bg-white px-6 text-center" id="proyectos">
-      </section>
-
       {/* Sección 3: Accion, ir a servicios */}
-      <section className="py-16 bg-indigo-100 px-6 text-center">
+      <section className="min-h-screen flex flex-col md:flex-row md:items-center text center md:justify-center py-16 bg-indigo-100 px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
+        <img
+          src="/img/contacto.jpg"
+          alt="Fondo decorativo"
+          className="absolute inset-0 w-full h-full object-cover opacity-10 -z-10"
+        />
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
+          <span className="inline-block text-sm text-indigo-600 uppercase tracking-widest mb-2">
+            🚀 Listos para dar el siguiente paso
+          </span>
+          <h2 className="text-4xl font-bold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
           <p className="text-lg text-gray-600 mb-6">Explorá nuestros servicios o contactanos para colaborar.</p>
+          <p className="text-md text-gray-700 mb-4">
+            Diseño personalizado, asesoramiento ético, resultados reales.
+          </p>
           <Link to="/servicios">
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition">
+            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition mx-auto block">
               Empezar ahora
             </button>
           </Link>
         </div>
       </section>
 
-      {/* Sección : Oportunidades */}
-      <section className="relative py-16 px-6 text-white" id="oportunidades">
-        <img
-          src="/public/img/sumate.jpg"
-          alt="Persona trabajando"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-indigo-700 mb-8 text-center">Sumate al equipo</h2>
-          <p className="text-lg text-gray-800 mb-6 text-center">
-            Siempre estamos en la busqueda de potenciar nuevos talentos
-          </p>
+      {/* Sección : Trabajo */}
+      <section className="relative bg-white text-gray-900 py-20 px-6 overflow-hidden" id="oportunidades">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+          {/* Texto principal a la izquierda */}
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold text-indigo-700 mb-4">Sumate al equipo</h2>
+            <p className="text-lg text-gray-800">
+              Siempre estamos en la búsqueda de potenciar nuevos talentos. Si compartís nuestra visión, queremos conocerte.
+            </p>
+          </div>
+
+          {/* Imagen con degradado bilateral solo en md+ */}
+          <div className="relative h-80 overflow-hidden rounded-lg hidden md:block">
+            <img
+              src="/img/sumate.jpg"
+              alt="Persona trabajando"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-transparent to-transparent" />
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white via-transparent to-transparent" />
+          </div>
+          {/* Imagen simplificada en mobile */}
+          <div className="relative h-64 overflow-hidden rounded-lg md:hidden">
+            <img
+              src="/img/sumate.jpg"
+              alt="Persona trabajando"
+              className="w-full h-full object-cover opacity-80"
+            />
+          </div>
+        </div>
+        {/* Cards de oportunidades */}
+        <div className="max-w-7xl mx-auto mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {oportunidadesDestacadas.map((oportunidad) => (
               <div
@@ -277,14 +305,14 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-10">
-            <Link to="/oportunidades">
-              <button className="px-6 py-2 rounded bg-indigo-700 text-white font-semibold hover:bg-indigo-800 transition">
-                Ver todas
-              </button>
-            </Link>
-          </div>
+        </div>
+        {/* Botón */}
+        <div className="text-center mt-10">
+          <Link to="/oportunidades">
+            <button className="px-6 py-2 rounded bg-indigo-700 text-white font-semibold hover:bg-indigo-800 transition">
+              Ver todas
+            </button>
+          </Link>
         </div>
       </section>
 

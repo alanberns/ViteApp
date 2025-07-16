@@ -237,28 +237,38 @@ export default function Home() {
       </section>
 
       {/* Sección 3: Accion, ir a servicios */}
-      <section className="min-h-screen flex flex-col md:flex-row md:items-center text center md:justify-center py-16 bg-indigo-100 px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
+      <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-20 py-20 overflow-hidden text-white">
+        {/* Imagen de fondo */}
         <img
-          src="/img/contacto.jpg"
+          src="/img/union.jpg"
           alt="Fondo decorativo"
-          className="absolute inset-0 w-full h-full object-cover opacity-10 -z-10"
+          className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
         />
-        <div className="max-w-4xl mx-auto">
-          <span className="inline-block text-sm text-indigo-600 uppercase tracking-widest mb-2">
+
+        {/* Capa oscura para contraste */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+
+        {/* Contenido centrado encima */}
+        <div className="relative z-20 max-w-4xl mx-auto text-center space-y-6">
+          <span className="inline-block text-sm text-indigo-300 uppercase tracking-widest">
             🚀 Listos para dar el siguiente paso
           </span>
-          <h2 className="text-4xl font-bold text-indigo-700 mb-4">Tu experiencia empieza acá</h2>
-          <p className="text-lg text-gray-600 mb-6">Explorá nuestros servicios o contactanos para colaborar.</p>
-          <p className="text-md text-gray-700 mb-4">
+          <h2 className="text-5xl font-bold text-white">Tu experiencia empieza acá</h2>
+          <p className="text-lg text-indigo-100">
+            Explorá nuestros servicios o contactanos para colaborar.
+          </p>
+          <p className="text-md text-indigo-200">
             Diseño personalizado, asesoramiento ético, resultados reales.
           </p>
           <Link to="/servicios">
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition mx-auto block">
+            <button className="bg-white text-indigo-700 font-semibold px-6 py-3 mt-8 rounded-lg shadow hover:bg-gray-100 transition">
               Empezar ahora
             </button>
           </Link>
         </div>
       </section>
+
+
 
       {/* Sección : Trabajo */}
       <section className="relative bg-white text-gray-900 py-20 px-6 overflow-hidden" id="oportunidades">

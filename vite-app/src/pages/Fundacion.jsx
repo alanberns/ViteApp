@@ -35,19 +35,46 @@ export default function Fundacion() {
 
             <section className="w-full">
                 {/* Rectángulo de color debajo de la imagen diagonal */}
-                <div className="bg-indigo-600 w-full pt-20 pb-28 md:pt-32 md:pb-40 relative z-10 text-center text-white">
+                <div className="bg-white w-full pt-20 pb-28 md:pt-32 md:pb-40 relative z-10 text-center text-white">
                     <div className="max-w-5xl mx-auto px-6">
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">Unite a nuestra misión</h2>
-                        <p className="text-lg text-indigo-100 max-w-2xl mx-auto">
+                        <h2 className="text-4xl md:text-6xl font-bold text-indigo-600 mb-6">Unite a nuestra misión</h2>
+                        <p className="text-lg text-indigo-400 max-w-2xl mx-auto">
                             Tecnología con propósito, impacto real y valores que nos definen.
                         </p>
 
-                        <button className="mt-10 bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+                        <button className="mt-10 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
                             Sumate
                         </button>
                     </div>
                 </div>
             </section>
+
+           
+  <section className="relative w-full h-[500px] overflow-hidden text-white flex bg-indigo-600">
+  {/* Bloque de color encima con corte diagonal */}
+  <div
+    className="w-[75%] bg-indigo-600 z-10 flex items-center px-8"
+    
+  >
+    <div className="max-w-xl">
+      <h2 className="text-4xl font-bold mb-4">Explorá sin límites</h2>
+      <p className="text-lg text-indigo-100">
+        Donde la creatividad se encuentra con la tecnología, y las ideas toman forma.
+      </p>
+    </div>
+  </div>
+
+  {/* Imagen al fondo con recorte inverso */}
+  <img
+    src="/img/union.jpg"
+    alt="Imagen recortada"
+    className="w-[45%] h-full object-cover z-0"
+    style={{
+      clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 0 100%)',
+    }}
+  />
+</section>
+
 
         </div>
     );

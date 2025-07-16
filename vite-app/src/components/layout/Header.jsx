@@ -27,9 +27,6 @@ export default function Header() {
           <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
             Servicios
           </Link>
-          <Link to="/contacto" className="text-white hover:text-indigo-200 transition-colors">
-            Contacto
-          </Link>
           <Link to="/oportunidades" className="text-white hover:text-indigo-200 transition-colors">
             Oportunidades
           </Link>
@@ -48,9 +45,6 @@ export default function Header() {
           </Link>
           <Link to="/servicios" className="text-white hover:text-indigo-200 transition-colors">
             Servicios
-          </Link>
-          <Link to="/contacto" className="text-white hover:text-indigo-200 transition-colors">
-            Contacto
           </Link>
           <Link to="/oportunidades" className="text-white hover:text-indigo-200 transition-colors">
             Oportunidades

@@ -1,14 +1,19 @@
 export default function Contacto() {
     return (
         <div className="w-full flex flex-col">
-            <section className="py-20 bg-indigo-50 text-gray-900 min-h-screen">
+            <section className="relative py-20 bg-indigo-50 text-gray-900 min-h-screen overflow-hidden">
+                <img
+                    src="/img/contacto.jpg"
+                    alt="Persona escribiendo"
+                    className="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm -z-10"
+                />
                 <div className="max-w-3xl mx-auto px-6">
                     <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-6 text-center">Contacto</h2>
                     <p className="text-center text-gray-700 mb-12">
                         ¿Tenés una idea, proyecto o simplemente querés saludar? Escribinos y te respondemos en breve.
                     </p>
 
-                    <form className="bg-white shadow-lg rounded-xl p-8 space-y-6">
+                    <form className="bg-white bg-opacity-90 backdrop-blur-md shadow-2xl rounded-xl p-8 space-y-6">
                         <div>
                             <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
                                 Nombre

@@ -30,6 +30,9 @@ export default function Header() {
           <Link to="/oportunidades" className="text-white hover:text-indigo-200 transition-colors">
             Oportunidades
           </Link>
+          <Link to="/fundacion" className="text-white hover:text-indigo-200 transition-colors">
+            Fundacion
+          </Link>
         </nav>
       </div>
 
@@ -48,6 +51,9 @@ export default function Header() {
           </Link>
           <Link to="/oportunidades" className="text-white hover:text-indigo-200 transition-colors">
             Oportunidades
+          </Link>
+          <Link to="/fundacion" className="text-white hover:text-indigo-200 transition-colors">
+            Fundacion
           </Link>
         </nav>
       </div>

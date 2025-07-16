@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Servicios from './pages/Servicios';
 import ScrollToTop from "./components/ScrollToTop";
 import Oportunidades from './pages/Oportunidades';
+import Fundacion from './pages/Fundacion';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/oportunidades" element={<Oportunidades />} />
+            <Route path="/fundacion" element={<Fundacion />} />
           </Routes>
         </main>
 

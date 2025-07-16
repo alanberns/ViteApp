@@ -76,18 +76,20 @@ export default function Home() {
 
 
       {/* Sección 2: Información / Destacados */}
-      <section className="py-16 bg-white px-6 text-gray-800">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-indigo-700 mb-6">¿Qué hacemos?</h2>
-          <p className="text-lg pb-8">
+      <section className="relative py-16 px-6 text-white">
+        <img
+          src="/info-imagen.jpg"
+          alt="Persona trabajando"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="relative max-w-5xl mx-auto">
+          <h2 className="text-3xl font-semibold text-white mb-6">¿Qué hacemos?</h2>
+          <p className="text-lg">
             Creamos herramientas centradas en las personas, respetando su privacidad y fomentando el desarrollo sostenible de la tecnología.
           </p>
-          <blockquote className="border-l-4 border-indigo-500 pl-4 text-gray-800 italic">
-            “Desde nuestros comienzos, soñamos con una tecnología que respete, inspire y empodere. Hoy, cada herramienta que creamos refleja ese compromiso con las personas y con un futuro sostenible.”
-            <footer className="mt-2 text-gray-500 text-sm">— Alejo González, Fundador de A-B</footer>
-          </blockquote>
         </div>
       </section>
+
 
       {/* Sección : Pilares */}
       <section className="py-20 px-6 bg-indigo-50">

@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-indigo-200 mt-8 pt-4 text-center text-sm text-gray-500">
+      <div className="mx-auto my-6 border-t-2 border-indigo-500 w-3/4 mt-8 pt-4 text-center text-sm text-gray-500">
         &copy; 2025 Mi Proyecto. Todos los derechos reservados.
       </div>
     </footer>

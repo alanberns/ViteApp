@@ -46,56 +46,76 @@ export default function Home() {
       tipo: "Híbrido - Jornada completa"
     }
   ];
-  
+
 
   return (
     <div className="w-full flex flex-col">
       {/* Sección de bienvenida */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-white to-indigo-200 px-6 md:px-20 md:py-4 text-gray-900 gap-10 md:gap-32">
-      <img
+      <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
+        <img
           src="/public/img/inicio.jpg"
-          alt="Persona trabajando"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          alt="Escritorio con una notebook"
+          className="absolute inset-0 w-full h-full object-cover blur-sm opacity-40"
         />
         {/* Logo grande lado izquierdo */}
         <div className="flex flex-col items-center md:items-center text-center">
-          <div className="text-7xl md:text-8xl font-extrabold tracking-tight text-indigo-600">&lt;/&gt;</div>
-          <div className="text-5xl md:text-6xl font-semibold text-indigo-600">A-B</div>
+        <div className="bg-white bg-opacity-70 rounded px-4 py-2 shadow-md">
+            <div className="text-7xl font-extrabold tracking-tight text-indigo-600 drop-shadow-lg">&lt;/&gt;</div>
+            <div className="text-5xl font-semibold text-indigo-600 drop-shadow-lg">A-B</div>
+          </div>
+          <p className="text-sm text-indigo-700 mt-4 italic">Tecnología con propósito y ética real</p>
         </div>
 
         {/* Texto lado derecho */}
-        <div className="max-w-md text-center md:text-left">
+        <div className="max-w-md text-center md:text-left drop-shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-indigo-900">Soluciones Digitales Éticas</h1>
           <p className="text-base md:text-lg text-gray-800 mb-6">
             Desarrollo con propósito, elegancia y tecnología que transforma.
           </p>
-          <a href="#proyectos">
-            <button className="px-6 py-2 rounded bg-indigo-700 text-white font-medium hover:bg-indigo-800 transition">
-              Conocer más
-            </button>
-          </a>
-        </div>
-
-      </section>
-
-
-      {/* Sección 2: Información / Destacados */}
-      <section className="relative py-16 px-6 text-white">
-        <img
-          src="/public/img/hacemos.jpg"
-          alt="Persona trabajando"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-        <div className="relative max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-white mb-6">¿Qué hacemos?</h2>
-          <p className="text-lg">
-            Creamos herramientas centradas en las personas, respetando su privacidad y fomentando el desarrollo sostenible de la tecnología.
-          </p>
+          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-indigo-600 bg-gray-100 bg-opacity-80 px-4 py-2 rounded shadow-md">
+            <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
+            </svg>
+            <span className="text-gray-900">Premio a la Innovación Ética 2025</span>
+          </div>
         </div>
       </section>
 
+      {/* Sección Que hacemos */}
+      <section className="relative bg-white text-gray-900 py-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-      {/* Sección : Pilares */}
+          {/* Imagen con degradado bilateral solo en md+ */}
+          <div className="relative h-80 overflow-hidden rounded-lg hidden md:block">
+            <img
+              src="/img/hacemos.jpg"
+              alt="Persona trabajando"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-transparent to-transparent" />
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white via-transparent to-transparent" />
+          </div>
+          {/* Imagen simplificada en mobile */}
+          <div className="relative h-64 overflow-hidden rounded-lg md:hidden">
+            <img
+              src="/img/hacemos.jpg"
+              alt="Persona trabajando"
+              className="w-full h-full object-cover opacity-80"
+            />
+          </div>
+
+          {/* Texto principal */}
+          <div className="relative z-10">
+            <h2 className="text-3xl font-semibold text-indigo-700 mb-6">¿Qué hacemos?</h2>
+            <p className="text-lg text-gray-800">
+              Creamos herramientas centradas en las personas, respetando su privacidad y fomentando el desarrollo sostenible de la tecnología.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Sección de pilares */}
       <section className="py-20 px-6 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center mb-16">
@@ -234,15 +254,17 @@ export default function Home() {
       </section>
 
       {/* Sección : Oportunidades */}
-      <section className="py-20 px-6 bg-white text-gray-800" id="oportunidades">
+      <section className="relative py-16 px-6 text-white" id="oportunidades">
+        <img
+          src="/public/img/sumate.jpg"
+          alt="Persona trabajando"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
         <div className="max-w-6xl mx-auto">
-          <img
-              src="/public/img/sumate.jpg"
-              alt="Persona trabajando"
-              className="absolute inset-0 w-full h-full object-cover opacity-30"
-            />
           <h2 className="text-4xl font-bold text-indigo-700 mb-8 text-center">Sumate al equipo</h2>
-
+          <p className="text-lg text-gray-800 mb-6 text-center">
+            Siempre estamos en la busqueda de potenciar nuevos talentos
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {oportunidadesDestacadas.map((oportunidad) => (
               <div

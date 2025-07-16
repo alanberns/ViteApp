@@ -1,5 +1,75 @@
+import CountUp from 'react-countup';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Line } from 'react-chartjs-2';
+import {
+    Chart as ChartJS, 
+    BarElement, 
+    CategoryScale, 
+    LinearScale, 
+    LineElement,
+    PointElement,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+import { ArcElement } from 'chart.js';
+
+ChartJS.register(ArcElement);
+
+const pieData = {
+    labels: ['Desarrollo Web', 'Consultoría', 'Branding', 'Automatización'],
+    datasets: [
+        {
+            data: [40, 25, 20, 15],
+            backgroundColor: ['#6366F1', '#818CF8', '#A5B4FC', '#E0E7FF'],
+            borderWidth: 1,
+        },
+    ],
+};
+
+const pieOptions = {
+    responsive: true,
+    plugins: { legend: { position: 'bottom' } },
+};
+
+
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
+
+const lineData = {
+    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul'],
+    datasets: [
+        {
+            label: 'Proyectos completados',
+            data: [5, 10, 14, 18, 25, 32, 45],
+            borderColor: '#4F46E5',
+            backgroundColor: 'rgba(99, 102, 241, 0.2)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 4,
+        },
+    ],
+};
+
+const lineOptions = {
+    responsive: true,
+    plugins: { legend: { display: true }, tooltip: { mode: 'index' } },
+};
+
+
+const options = {
+    responsive: true,
+    plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true },
+    },
+    scales: {
+        y: {
+            ticks: { stepSize: 10000 },
+            beginAtZero: true,
+        },
+    },
+};
 
 export default function Servicios() {
     const servicios = [
@@ -70,6 +140,63 @@ export default function Servicios() {
 
                 </div>
             </section>
+
+
+            <section className="py-20 bg-indigo-50 text-gray-900">
+                <div className="max-w-7xl mx-auto px-6 text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-8">Resultados que hablan</h2>
+                    <p className="text-gray-700 text-lg mb-16 max-w-2xl mx-auto">
+                        Estos son algunos logros que alcanzamos junto a nuestros clientes.
+                    </p>
+
+                    {/* Métricas destacadas */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                        <div className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-3xl font-bold text-indigo-600">
+                                +
+                                <CountUp start={0} end={120} duration={2.5} enableScrollSpy scrollSpyOnce />
+                                %
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-2">Incremento en tráfico orgánico</p>
+                        </div>
+                        <div className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-3xl font-bold text-indigo-600">
+                                <CountUp start={0} end={35} duration={2.5} enableScrollSpy scrollSpyOnce />
+                                K
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-2">Usuarios activos mensuales</p>
+                        </div>
+                        <div className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-3xl font-bold text-indigo-600">
+                                <CountUp start={0} end={98} duration={2.5} enableScrollSpy scrollSpyOnce />
+                                %
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-2">Satisfacción de clientes</p>
+                        </div>
+                        <div className="bg-white rounded-xl shadow-md p-6">
+                            <h3 className="text-3xl font-bold text-indigo-600">
+                                +
+                                <CountUp start={0} end={50} duration={2.5} enableScrollSpy scrollSpyOnce />
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-2">Proyectos lanzados</p>
+                        </div>
+                    </div>
+
+                    {/* Imagen decorativa o gráfico */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+                        <div className="bg-white p-6 rounded-xl shadow-md">
+                            <h3 className="text-xl font-bold text-indigo-700 mb-4">Evolución de Proyectos</h3>
+                            <Line data={lineData} options={lineOptions} />
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl shadow-md">
+                            <h3 className="text-xl font-bold text-indigo-700 mb-4">Distribución de Servicios</h3>
+                            <Pie data={pieData} options={pieOptions} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     );
 }

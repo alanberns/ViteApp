@@ -212,7 +212,7 @@ export default function Servicios() {
                             Estamos acá para escuchar tus ideas, compartir las nuestras y construir soluciones con propósito.
                         </p>
                         <img
-                            src="/img/contacto.jpg"
+                            src="/img/contacto.avif"
                             alt="Persona escribiendo"
                             className="rounded-lg shadow-md opacity-90"
                         />

@@ -51,15 +51,15 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col">
       {/* Sección de bienvenida */}
-      <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32 animate-fade-in">
+      <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
         <img
-          src="/public/img/inicio.jpg"
+          src="/img/inicio.avif"
           alt="Escritorio con una notebook"
           className="absolute inset-0 w-full h-full object-cover blur-sm opacity-40"
         />
         {/* Logo grande lado izquierdo */}
-        <div className="flex flex-col items-center md:items-center text-center">
-          <div className="bg-white bg-opacity-70 rounded px-4 py-2 shadow-md">
+        <div className="flex flex-col items-center md:items-center text-center animate-fade-in">
+          <div className="bg-white bg-opacity-20 rounded px-4 py-2 shadow-md">
             <div className="text-7xl font-extrabold tracking-tight text-indigo-600 drop-shadow-lg">&lt;/&gt;</div>
             <div className="text-5xl font-semibold text-indigo-600 drop-shadow-lg">A-B</div>
           </div>
@@ -67,12 +67,12 @@ export default function Home() {
         </div>
 
         {/* Texto lado derecho */}
-        <div className="max-w-md text-center md:text-left drop-shadow-lg">
+        <div className="max-w-md text-center md:text-left drop-shadow-lg animate-fade-in">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-indigo-900">Soluciones Digitales Éticas</h1>
           <p className="text-base md:text-lg text-gray-800 mb-6">
             Desarrollo con propósito, elegancia y tecnología que transforma.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-indigo-600 bg-gray-100 bg-opacity-80 px-4 py-2 rounded shadow-md">
+          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-indigo-600 bg-indigo-200 bg-opacity-40 px-4 py-2 rounded shadow-md">
             <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
             </svg>
@@ -88,7 +88,7 @@ export default function Home() {
           {/* Imagen con degradado bilateral solo en md+ */}
           <div className="relative h-80 overflow-hidden rounded-lg hidden md:block">
             <img
-              src="/img/hacemos.jpg"
+              src="/img/hacemos.avif"
               alt="Persona trabajando"
               className="w-full h-full object-cover"
             />
@@ -98,7 +98,7 @@ export default function Home() {
           {/* Imagen simplificada en mobile */}
           <div className="relative h-64 overflow-hidden rounded-lg md:hidden">
             <img
-              src="/img/hacemos.jpg"
+              src="/img/hacemos.avif"
               alt="Persona trabajando"
               className="w-full h-full object-cover opacity-80"
             />
@@ -240,7 +240,7 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-20 py-20 overflow-hidden text-white">
         {/* Imagen de fondo */}
         <img
-          src="/img/union.jpg"
+          src="/img/union.avif"
           alt="Fondo decorativo"
           className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
         />

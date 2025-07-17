@@ -66,7 +66,7 @@ export default function Fundacion() {
 
   {/* Imagen al fondo con recorte inverso */}
   <img
-    src="/img/union.jpg"
+    src="/img/union.avif"
     alt="Imagen recortada"
     className="w-[45%] h-full object-cover z-0"
     style={{

@@ -8,6 +8,7 @@ import Servicios from './pages/Servicios';
 import ScrollToTop from "./components/ScrollToTop";
 import Oportunidades from './pages/Oportunidades';
 import Fundacion from './pages/Fundacion';
+import ChatBotWidget from './components/ChatBotWidget';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,8 @@ function App() {
         </main>
 
         <Footer />
+        {/* Botón flotante del chatbot */}
+        <ChatBotWidget />
       </div>
     </BrowserRouter>
   )

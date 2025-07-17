@@ -7,7 +7,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-indigo-600 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white">Mi Proyecto</h1>
+        <Link to="/">
+          <h1 className="text-2xl font-bold text-white">Mi Proyecto</h1>
+        </Link>
 
         {/* Botón hamburguesa mobile */}
         <div className="md:hidden">

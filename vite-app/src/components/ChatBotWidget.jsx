@@ -100,14 +100,24 @@ export default function ChatBotWidget() {
               </div>
             ))}
           </div>
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleUserMessage()}
-            placeholder="Escribí tu mensaje..."
-            className="p-2 border rounded text-sm"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleUserMessage()}
+              placeholder="Escribí tu mensaje..."
+              className="p-2 pr-10 border rounded text-sm w-full"
+            />
+
+            {/* Botón flotante dentro del input */}
+            <button
+              onClick={handleUserMessage}
+              className="absolute right-1 top-1 bottom-1 bg-indigo-700 hover:bg-indigo-800 text-white px-2 rounded flex items-center justify-center"
+            >
+              ➤
+            </button>
+          </div>
         </div>
       )}
     </>

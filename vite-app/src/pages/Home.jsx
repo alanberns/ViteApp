@@ -89,7 +89,7 @@ export default function Home() {
           {/* Imagen con degradado bilateral solo en md+ */}
           <div className="relative h-80 overflow-hidden rounded-lg hidden md:block">
             <img
-              src="/img/hacemos.avif"
+              src={`${BASE_URL}/img/hacemos.avif`}
               alt="Persona trabajando"
               className="w-full h-full object-cover"
             />
@@ -99,7 +99,7 @@ export default function Home() {
           {/* Imagen simplificada en mobile */}
           <div className="relative h-64 overflow-hidden rounded-lg md:hidden">
             <img
-              src="/img/hacemos.avif"
+              src={`${BASE_URL}/img/hacemos.avif`}
               alt="Persona trabajando"
               className="w-full h-full object-cover opacity-80"
             />
@@ -286,7 +286,7 @@ export default function Home() {
           {/* Imagen con degradado bilateral solo en md+ */}
           <div className="relative h-80 overflow-hidden rounded-lg hidden md:block">
             <img
-              src="/img/sumate.jpg"
+              src={`${BASE_URL}/img/sumate.jpg"`}
               alt="Persona trabajando"
               className="w-full h-full object-cover"
             />
@@ -296,7 +296,7 @@ export default function Home() {
           {/* Imagen simplificada en mobile */}
           <div className="relative h-64 overflow-hidden rounded-lg md:hidden">
             <img
-              src="/img/sumate.jpg"
+              src={`${BASE_URL}/img/sumate.jpg"`}
               alt="Persona trabajando"
               className="w-full h-full object-cover opacity-80"
             />

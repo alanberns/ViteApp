@@ -13,7 +13,7 @@ import ChatBotWidget from './components/ChatBotWidget';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ViteApp">
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white">
         <Header />

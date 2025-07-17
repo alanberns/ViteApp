@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export default function ChatBotWidget() {
   const [visible, setVisible] = useState(false);
   const [showBubble, setShowBubble] = useState(false); // empieza oculta
+  const [pulse, setPulse] = useState(false);
 
   const toggleChat = () => {
     setVisible(!visible);
@@ -14,12 +15,24 @@ export default function ChatBotWidget() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Animación cada 10 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPulse(true);
+      setTimeout(() => setPulse(false), 1000); // duración de animación
+    }, 10000); // cada 10 s
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-      {/* Botón flotante */}
+      {/* Botón flotante con animación */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-full shadow-lg transition"
+        className={`fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-full shadow-lg transition ${
+          pulse ? 'animate-bounce-once' : ''
+        }`}
       >
         💬
       </button>
@@ -27,7 +40,7 @@ export default function ChatBotWidget() {
       {/* Burbuja con delay */}
       {showBubble && (
         <div className="fixed bottom-[90px] right-6 z-40 bg-white text-indigo-800 px-4 py-2 rounded-lg shadow-md flex items-center gap-2 animate-fade-in">
-          <span>¿Necesitás ayuda?</span>
+          <span>🤖 ¿Necesitás ayuda?</span>
           <button onClick={() => setShowBubble(false)} className="text-indigo-500 hover:text-red-500 font-bold">
             ✖
           </button>

@@ -1,3 +1,5 @@
+import { BASE_URL } from '../utils/constants';
+
 export default function Fundacion() {
 
     return (
@@ -12,7 +14,7 @@ export default function Fundacion() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent z-10" />
 
                 <img
-                    src="/img/unlp.jpg"
+                    src={`${BASE_URL}/img/unlp.jpg`}
                     alt="Estadio fundacional"
                     className="absolute inset-0 w-full h-full object-cover z-0"
                 />
@@ -49,31 +51,31 @@ export default function Fundacion() {
                 </div>
             </section>
 
-           
-  <section className="relative w-full h-[500px] overflow-hidden text-white flex bg-indigo-600">
-  {/* Bloque de color encima con corte diagonal */}
-  <div
-    className="w-[75%] bg-indigo-600 z-10 flex items-center px-8"
-    
-  >
-    <div className="max-w-xl">
-      <h2 className="text-4xl font-bold mb-4">Explorá sin límites</h2>
-      <p className="text-lg text-indigo-100">
-        Donde la creatividad se encuentra con la tecnología, y las ideas toman forma.
-      </p>
-    </div>
-  </div>
 
-  {/* Imagen al fondo con recorte inverso */}
-  <img
-    src="/img/union.avif"
-    alt="Imagen recortada"
-    className="w-[45%] h-full object-cover z-0"
-    style={{
-      clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 0 100%)',
-    }}
-  />
-</section>
+            <section className="relative w-full h-[500px] overflow-hidden text-white flex bg-indigo-600">
+                {/* Bloque de color encima con corte diagonal */}
+                <div
+                    className="w-[75%] bg-indigo-600 z-10 flex items-center px-8"
+
+                >
+                    <div className="max-w-xl">
+                        <h2 className="text-4xl font-bold mb-4">Explorá sin límites</h2>
+                        <p className="text-lg text-indigo-100">
+                            Donde la creatividad se encuentra con la tecnología, y las ideas toman forma.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Imagen al fondo con recorte inverso */}
+                <img
+                    src={`${BASE_URL}/img/union.avif`}
+                    alt="Imagen recortada"
+                    className="w-[45%] h-full object-cover z-0"
+                    style={{
+                        clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 0 100%)',
+                    }}
+                />
+            </section>
 
 
         </div>

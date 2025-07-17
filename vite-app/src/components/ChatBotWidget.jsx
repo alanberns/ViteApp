@@ -7,17 +7,17 @@ export default function ChatBotWidget() {
   const bottomRef = useRef(null);
 
 
-  {/* CHATBOT */}
+  {/* CHATBOT */ }
   const [messages, setMessages] = useState([
     { from: 'bot', text: '¡Hola! ¿En qué puedo ayudarte hoy?' },
   ]);
   const [input, setInput] = useState('');
   const handleUserMessage = () => {
     if (!input.trim()) return;
-  
+
     const userMsg = { from: 'user', text: input };
     let botResponse = { from: 'bot', text: 'No entendí, ¿podés reformular?' };
-  
+
     // Respuestas simples
     const msgLower = input.toLowerCase();
     if (msgLower.includes('hola')) botResponse.text = '¡Hola! 👋 ¿Cómo estás?';
@@ -35,11 +35,11 @@ export default function ChatBotWidget() {
     if (msgLower.includes('pregunta')) botResponse.text = '¡Haceme una pregunta! Te contesto lo mejor que pueda.';
     if (msgLower.includes('diseño')) botResponse.text = 'Nos especializamos en diseño funcional y estético 🎨';
     if (msgLower.includes('accesibilidad')) botResponse.text = 'Siempre buscamos que nuestros sitios sean inclusivos 💬';
-  
+
     setMessages((prev) => [...prev, userMsg, botResponse]);
     setInput('');
   };
-  { /* --- */}  
+  { /* --- */ }
 
   const toggleChat = () => {
     setVisible(!visible);
@@ -64,16 +64,15 @@ export default function ChatBotWidget() {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-  
+
 
   return (
     <>
       {/* Botón flotante con animación */}
       <button
         onClick={toggleChat}
-        className={`fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-full shadow-lg transition ${
-          pulse ? 'animate-bounce-once' : ''
-        }`}
+        className={`fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-full shadow-lg transition ${pulse ? 'animate-bounce-once' : ''
+          }`}
       >
         💬
       </button>

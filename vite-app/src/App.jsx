@@ -11,11 +11,10 @@ import Fundacion from './pages/Fundacion';
 import ChatBotWidget from './components/ChatBotWidget';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
 

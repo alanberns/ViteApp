@@ -1,10 +1,8 @@
 import CountUp from 'react-countup';
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
-    BarElement,
     CategoryScale,
     LinearScale,
     LineElement,
@@ -14,6 +12,7 @@ import {
 } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { ArcElement } from 'chart.js';
+import { BASE_URL } from '../utils/constants';
 
 ChartJS.register(ArcElement);
 
@@ -212,7 +211,7 @@ export default function Servicios() {
                             Estamos acá para escuchar tus ideas, compartir las nuestras y construir soluciones con propósito.
                         </p>
                         <img
-                            src="/img/contacto.avif"
+                            src={`${BASE_URL}/img/unlp.jpg/img/contacto.avif`}
                             alt="Persona escribiendo"
                             className="rounded-lg shadow-md opacity-90"
                         />

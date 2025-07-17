@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import { motion } from "framer-motion";
+import { BASE_URL } from '../utils/constants';
 
 export default function Home() {
   const proyectos = [
@@ -53,7 +54,7 @@ export default function Home() {
       {/* Sección de bienvenida */}
       <section className="min-h-screen flex flex-col md:flex-row md:items-center md:justify-center px-6 md:px-20 py-10 text-gray-900 gap-10 md:gap-32">
         <img
-          src="/img/inicio.avif"
+          src={`${BASE_URL}/img/inicio.avif`}
           alt="Escritorio con una notebook"
           className="absolute inset-0 w-full h-full object-cover blur-sm opacity-40"
         />
@@ -240,7 +241,7 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-20 py-20 overflow-hidden text-white">
         {/* Imagen de fondo */}
         <img
-          src="/img/union.avif"
+          src={`${BASE_URL}/img/union.avif`}
           alt="Fondo decorativo"
           className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
         />

@@ -58,6 +58,6 @@ Este proyecto no busca ofrecer una solución comercial completa, sino servir com
 
 ```bash
 git clone https://github.com/alanberns/ViteApp.git
-cd ViteApp
+cd ViteApp/vite-app
 npm install
 npm run dev
